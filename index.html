@@ -3,61 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Thanksgiving 🍂🦃</title>
+  <title>Hello Stranger</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
-      color: #5a2d0c;
-      margin: 0;
-      padding: 0;
+      margin: 50px;
+      background: #fffbe7;
     }
     h1 {
-      font-size: 2.5em;
-      margin-top: 50px;
-    }
-    p {
-      font-size: 1.2em;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
     }
     button {
-      margin-top: 20px;
       padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      background: #e07b39;
+      font-size: 16px;
+      background: #ff9800;
       color: white;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
+      transition: 0.3s;
     }
     button:hover {
-      background: #c96a2d;
+      background: #e68900;
     }
-    #message {
+    p {
+      font-size: 18px;
       margin-top: 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #8b4513;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <h1>🦃 Happy Thanksgiving! 🍁</h1>
-  <p>Click the button to get a Thanksgiving wish!</p>
-  <button onclick="showMessage()">Give Thanks</button>
-  <div id="message"></div>
+  <h1>Hello Stranger</h1>
+  <button onclick="showNext()">Click Me</button>
+  <p id="message"></p>
+  <div id="image-container"></div>
 
   <script>
-    const wishes = [
-      "May your stuffing be tasty and your turkey be plump! 🦃",
-      "Wishing you a harvest of blessings this Thanksgiving 🌾",
-      "Grateful for family, friends, and delicious food! 🍂",
-      "Happy Thanksgiving! May your day be full of joy and gratitude 💛"
+    const messages = [
+      "Heyyy!!!! Its been 1 day since our trip ended😖",
+      "Thanks for making this an awesome and memorable trip😁",
+      "Seri othukre overa enakku nadikka varala😅its jus for you",
+      "Poi solli indha website ah paaka vechathukku sorry😖",
+      "To be honest i haven't met such a person who is such a pure vibe",
+      "Trip mudinjathula irundhu ippo vara endha arr songs ketaalum unnoda voice thaa mind laa ooduthu🫠",
+      "Therla poornima naa laa indha feelings ku perusa nambura aal laa illa and moreover enakku idha enna ni solla ni um therla",
+      "It may be infactuation or really its written that i should fall for u🫠",
+      "It might be crazy but its the first time i am writing something for someone in a matter of few days",
+      "I thought maybe i could know some more abt you and tell all these but yea i thought its better to be honest with you athaa enakku manasula enna iruku ni sollite palagalam ni ninaiche😅",
+      "If this works there will be hurdles thaa inter religion and stuffs but yea i dont wanna miss the vibe we had🫠and no matter what i do i cant find another poornima. You are worth the efforts🫠",
+      "Nee sirichathu nee pesnathu ellamae en kanukkulla apdiyee iruku🫠I cant forget a single damn thing",
+      "Konjo overa pesita enna mannichuuuu naa konjo open type athaa",
+      "Ippavum solre to be honest naa propose laa pannala.... I just have these feelings for you and wanna know more about youuuu.... ",
+      "Naa pesrathula edhaachu thappa irundha sorry pa.... ",
+      "Illa if you felt the same which is a rare scenario🤔or oru 10% of the same.... Konjo pesi palagalam ni thoonuthu avlotha🫠.... Ennoda intentions ah open ah sollanum ni ninaichae avlothaa...",
+      "And moreover smile a lot🫠coz you are tooo damn cute when you smile🫠",
+      "Nee pesama ponalum paravala ivlo padichruka ni therinjaalae I am happy🫠",
+      "Apdiye pesama ponaalum I jus wanna say one thing.... Andha trip laa irundha maariyae eppavume happy ah iru coz that suits u✨😌",
+      "you know what the glass was my unpaid wingman😂"
     ];
 
-    function showMessage() {
-      const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
-      document.getElementById("message").innerText = randomWish;
+    let index = 0;
+
+    function showNext() {
+      const messageEl = document.getElementById("message");
+      const imageContainer = document.getElementById("image-container");
+
+      if (index < messages.length) {
+        messageEl.textContent = messages[index];
+        index++;
+      } else if (index === messages.length) {
+        messageEl.textContent = "";
+        const img = document.createElement("img");
+        img.src = "20250817_181239.jpg"; // your uploaded image filename
+        imageContainer.appendChild(img);
+        index++;
+      }
     }
   </script>
 </body>
