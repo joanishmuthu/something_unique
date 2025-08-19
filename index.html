@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Thanksgiving 🍂🦃</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+      color: #5a2d0c;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background: #e07b39;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c96a2d;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #8b4513;
+    }
+  </style>
+</head>
+<body>
+  <h1>🦃 Happy Thanksgiving! 🍁</h1>
+  <p>Click the button to get a Thanksgiving wish!</p>
+  <button onclick="showMessage()">Give Thanks</button>
+  <div id="message"></div>
+
+  <script>
+    const wishes = [
+      "May your stuffing be tasty and your turkey be plump! 🦃",
+      "Wishing you a harvest of blessings this Thanksgiving 🌾",
+      "Grateful for family, friends, and delicious food! 🍂",
+      "Happy Thanksgiving! May your day be full of joy and gratitude 💛"
+    ];
+
+    function showMessage() {
+      const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+      document.getElementById("message").innerText = randomWish;
+    }
+  </script>
+</body>
+</html>
