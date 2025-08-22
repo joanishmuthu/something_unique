@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Stranger</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background: #fffbe7;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #e68900;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXYLXSRLML"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXYLXSRLML');
+</script>  
+</head>
+<body>
+  <h1>Hello Stranger</h1>
+  <button onclick="showNext()">Hit me👊</button>
+  <p id="message"></p>
+  <div id="image-container"></div>
+
+  <script>
+    const messages = [
+      "Heyyy!!!! Its been 1 day since our trip ended😖",
+      "Thanks for making this an awesome and memorable trip😁",
+      "Seri othukre overa enakku nadikka varala😅its jus for you",
+      "Poi solli indha website ah paaka vechathukku sorry😖",
+      "To be honest i haven't met such a person who is such a pure vibe",
+      "Trip mudinjathula irundhu ippo vara endha arr songs ketaalum unnoda voice thaa mind laa ooduthu🫠",
+      "Therla poornima naa laa indha feelings ku perusa nambura aal laa illa and moreover enakku idha enna ni solla ni um therla",
+      "It may be infactuation or really its written that i should fall for u🫠",
+      "It might be crazy but its the first time i am writing something for someone in a matter of few days",
+      "I thought maybe i could know some more abt you and tell all these but yea i thought its better to be honest with you athaa enakku manasula enna iruku ni sollite palagalam ni ninaiche😅",
+      "If this works there will be hurdles thaa inter religion and stuffs but yea i dont wanna miss the vibe we had🫠and no matter what i do i cant find another poornima. You are worth the efforts🫠",
+      "Nee sirichathu nee pesnathu ellamae en kanukkulla apdiyee iruku🫠I cant forget a single damn thing",
+      "Konjo overa pesita enna mannichuuuu naa konjo open type athaa",
+      "Ippavum solre to be honest naa propose laa pannala.... I just have these feelings for you and wanna know more about youuuu.... ",
+      "Naa pesrathula edhaachu thappa irundha sorry pa.... ",
+      "Illa if you felt the same which is a rare scenario🤔or oru 10% of the same.... Konjo pesi palagalam ni thoonuthu avlotha🫠.... Ennoda intentions ah open ah sollanum ni ninaichae avlothaa...",
+      "And moreover smile a lot🫠coz you are tooo damn cute when you smile🫠",
+      "Nee pesama ponalum paravala ivlo padichruka ni therinjaalae I am happy🫠",
+      "Apdiye pesama ponaalum I jus wanna say one thing.... Andha trip laa irundha maariyae eppavume happy ah iru coz that suits u✨😌",
+      "Ever since i saw you my mind is playing mundhinam in loop🫠 with the exception of malini as u🤪",
+      "You are everything that i had thought of what love will feel when love hits me🫠 Pure 90's songs ah mandai laa ooditu iruku🫠",
+      "Apdiye pesama pona 125 days for your bday🥳 sooo advance happy birthday da🥳",
+      "you know what the glass was my unpaid wingman😂.See the pic in next slide 🤭 rombaaa busy ah vae irundheenga neenga🥱.Unna thoorama irundhu rasichutu irundhe🫠the way you smile 🫠the way u speak 🫠ellamae rasicheeeeee..... It was the best day ever✨.... Thanks mirror🫡"
+    ];
+
+    let index = 0;
+
+    function showNext() {
+      const messageEl = document.getElementById("message");
+      const imageContainer = document.getElementById("image-container");
+
+      if (index < messages.length) {
+        messageEl.textContent = messages[index];
+        index++;
+      } else if (index === messages.length) {
+        messageEl.textContent = "";
+        const img = document.createElement("img");
+        img.src = "20250817_181239.jpg";
+        imageContainer.appendChild(img);
+        index++;
+      }
+    }
+  </script>
+</body>
+</html>
